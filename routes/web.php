@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 Route::get('/register/public/produtos', 'ProdutosController@index');
 Route::get('/register/public/categorias', 'CategoriasController@index');
+Route::get('/register/public/categorias/novacategoria', 'CategoriasController@create');
+Route::post('/register/public/categorias', 'CategoriasController@store');
