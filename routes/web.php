@@ -17,7 +17,11 @@ Route::get('/', function () {
     return view('index');
 });
 
+// Rotas Produtos
 Route::get('/register/public/produtos', 'ProdutosController@index');
+
+// Rotas Categorias
 Route::get('/register/public/categorias', 'CategoriasController@index');
 Route::get('/register/public/categorias/novacategoria', 'CategoriasController@create');
 Route::post('/register/public/categorias', 'CategoriasController@store');
+Route::get('/register/public/categorias/excluir/{id}', 'CategoriasController@destroy');
