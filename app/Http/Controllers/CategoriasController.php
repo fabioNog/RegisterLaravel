@@ -14,7 +14,8 @@ class CategoriasController extends Controller
      */
     public function index()
     {
-        return view('pages.categorias');
+        $categorias = Categoria::all();
+        return view('pages.categorias',compact('categorias'));
     }
 
     /**
@@ -38,6 +39,7 @@ class CategoriasController extends Controller
         $cat = new Categoria();
         $cat->nome = $request->input('nomeCategoria');
         $cat->save();
+        return redirect('/register/public/categorias');
     }
 
     /**
