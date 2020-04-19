@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Categoria;
 class CategoriasController extends Controller
 {
     /**
@@ -23,7 +24,7 @@ class CategoriasController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.novacategoria');
     }
 
     /**
@@ -33,8 +34,10 @@ class CategoriasController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {   
+        $cat = new Categoria();
+        $cat->nome = $request->input('nomeCategoria');
+        $cat->save();
     }
 
     /**
