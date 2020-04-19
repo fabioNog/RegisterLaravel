@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/register/public/produtos', 'ProdutosController@index');
+Route::get('/register/public/categorias', 'CategoriasController@index');
