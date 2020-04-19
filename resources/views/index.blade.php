@@ -1,4 +1,4 @@
-@extends('pages.app')
+@extends('pages.app',["current" => "register/public/"])
 
 @section('body')
     <div class="jumbotron bg-light border border-secondary">

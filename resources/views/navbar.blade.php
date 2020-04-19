@@ -5,13 +5,13 @@
   
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li @if($current=="register/public") class="nav-item active" @else class="nav-item" @endif>
           <a class="nav-link" href="/register/public">Home</a>
         </li>
-        <li class="nav-item">
+        <li @if($current=="register/public/produtos") class="nav-item active" @else class="nav-item" @endif>
           <a class="nav-link" href="/register/public/produtos">Produtos</a>
         </li>
-        <li class="nav-item">
+        <li @if($current=="register/public/categorias") class="nav-item active" @else class="nav-item" @endif>
             <a class="nav-link" href="/register/public/categorias">Categorias</a>
           </li>
       </ul>
