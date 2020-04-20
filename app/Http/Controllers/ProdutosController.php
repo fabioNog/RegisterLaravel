@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Produto;
 class ProdutosController extends Controller
 {
     /**
@@ -13,7 +13,7 @@ class ProdutosController extends Controller
      */
     public function index()
     {
-        return view('pages.produtos');
+        return view('pages.produtos.produtos');
     }
 
     /**
@@ -23,7 +23,8 @@ class ProdutosController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('pages.produtos.novoproduto');
     }
 
     /**
@@ -34,7 +35,14 @@ class ProdutosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $produtos = new Produto;
+        $produtos->estoque = $request->estoqueProduto;
+        $produtos->preco = $request->precoProduto;
+        $produtos->categoria_id = $request->categoriaIDProduto;
+        // Salvando os produtos
+        $produtos->save();
+        // redirecionando para a listagem
+        return redirect('register/public/produtos/produtos');
     }
 
     /**
