@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Categoria;
 use Illuminate\Http\Request;
 use App\Produto;
+use App\Categorias;
 class ProdutosController extends Controller
 {
     /**
@@ -23,8 +25,9 @@ class ProdutosController extends Controller
      */
     public function create()
     {
-
-        return view('pages.produtos.novoproduto');
+        $categorias = Categoria::all();
+        // dd($categorias);
+        return view('pages.produtos.novoproduto',compact('categorias'));
     }
 
     /**
@@ -42,7 +45,7 @@ class ProdutosController extends Controller
         // Salvando os produtos
         $produtos->save();
         // redirecionando para a listagem
-        return redirect('register/public/produtos/produtos');
+        return redirect('register/public/produtos');
     }
 
     /**
