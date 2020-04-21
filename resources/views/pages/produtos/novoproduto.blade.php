@@ -37,8 +37,9 @@
                                 <option 
                                     value="{{ $cat->id }}"
                                     selected="selected"
+                                    key={{$cat->id}}
                                 >
-                                    {{$cat->id}}
+                                    {{$cat->nome}}
                                 </option>
                         @endforeach                                      
                     </select>
