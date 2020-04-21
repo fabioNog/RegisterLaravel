@@ -13,18 +13,18 @@
                             Aqui você cadastra todos
                             os seus produtos
                         </p>
-                        <a href="/produtos" class="btn btn-primary">Cadastrar</a>
+                        <a href="/register/public/produtos" class="btn btn-primary">Cadastrar</a>
                     </div>                                        
                 </div>
                 <div class="card border border-dark">
                     <div class="card-body">
                         <h5 class="card-title">
-                            Cadastro de Departamentos
+                            Cadastro de Categorias
                         </h5>
                         <p class="cart-text">
-                            Aqui você cadastra todos
-                            os seus departamentos</p>
-                        <a href="/produtos" class="btn btn-primary">Cadastrar</a>
+                            Aqui você cadastra todas
+                            as suas Categorias</p>
+                        <a href="/register/public/categorias" class="btn btn-primary">Cadastrar</a>
                     </div>                                        
                 </div>
             </div>
