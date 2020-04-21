@@ -26,20 +26,22 @@
                                 <td>{{$cat->nome}}</td> 
                             @endif                        
                         @endforeach
-                        <td>
+                        <div class="row">
+                        <td class="col-sm-12">
                             <a 
-                                 href="/register/public/categorias/editar/{{$prod->id}}"
-                                 class="btn btn-sm btn-primary"
+                                href="/register/public/produtos/editar/{{$prod->id}}"
+                                class="btn btn-sm btn-primary"
                             >
                                 Editar
                             </a>
                             <a 
-                                 href="/register/public/categorias/excluir/{{$prod->id}}"
-                                 class="btn btn-sm btn-danger"
+                                href="/register/public/produtos/excluir/{{$prod->id}}"
+                                class="btn btn-sm btn-danger"
                             >
                                 Excluir
                             </a>
                         </td>
+                        </div>                        
                     </tr>
                 @endforeach
             </tbody>
