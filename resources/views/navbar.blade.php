@@ -12,8 +12,11 @@
           <a class="nav-link" href="/register/public/produtos">Produtos</a>
         </li>
         <li @if($current=="register/public/categorias") class="nav-item active" @else class="nav-item" @endif>
+          <a class="nav-link" href="/register/public/produtosajax">ProdutosAjax</a>
+        </li>
+        <li @if($current=="register/public/categorias") class="nav-item active" @else class="nav-item" @endif>
             <a class="nav-link" href="/register/public/categorias">Categorias</a>
-          </li>
+        </li>
       </ul>
     </div>
   </nav>
