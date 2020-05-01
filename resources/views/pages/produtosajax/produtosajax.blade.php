@@ -21,7 +21,7 @@
         </table>
     </div>
     <div class="card-footer card-dark">
-        <button class="btn btn-primary" role="button">Cadastrar Ajax</button>
+        <button class="btn btn-primary" role="button" onclick="novoProduto()">Cadastrar Ajax</button>
     </div>
 </div>
 
@@ -37,9 +37,9 @@
                     <input type="hidden" id="id" class="form-control">
                     {{-- Input do Estoque --}}
                     <div class="form-group">
-                        <label for="estoque" class="control-label">Estoque</label>
+                        <label for="estoqueProduto" class="control-label">Estoque</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="nomeProduto" placeholder="Nome do Produto">
+                            <input type="text" class="form-control" id="estoqueProduto" placeholder="Nome do Produto">
                         </div>
                     </div>
                     {{-- Input do Preço --}}
@@ -66,4 +66,16 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('javascript')
+<script type="text/javascript">
+    function novoProduto(){
+        $('#id').val('');
+        $('#estoqueProduto').val('');
+        $('#precoProduto').val('');
+        $('#categoriaProduto').val('');
+        $('#dlgProdutos').modal('show')
+    }
+</script>
 @endsection
